@@ -24,7 +24,7 @@ def findPair (nums : List Nat) (target : Nat) : Option (Nat × Nat) :=
       match map[target - x]? with
         | some j => if j < index then some (j, index) else some (index, j)
         | none => loop xs (index + 1) (map.insert x index)
-  loop nums 0 (HashMap.empty)
+  loop nums 0 ( ∅ )
 
 #eval findPair first_case first_target
 
