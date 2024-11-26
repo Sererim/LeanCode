@@ -13,7 +13,8 @@ def second_k    : Nat := 3
 open Std
 
 def top_k_freq (numbers : List Nat) (k : Nat) : List (Nat × Nat) :=
-  (numbers.foldl (λ acc n => acc.insert n (acc.getD n 0 + 1)) ( ∅ : HashMap Nat Nat)).toList.take k
+  let intermidiate := (numbers.foldl (λ acc n => acc.insert n (acc.getD n 0 + 1)) ( ∅ : HashMap Nat Nat)).toList.take k
+  intermidiate
 
 #eval (top_k_freq first_case first_k)
 #eval top_k_freq second_case 3
