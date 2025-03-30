@@ -10,6 +10,7 @@ def first_out  : List Nat := [3, 2]
 def second_case : List Nat := [1, 1, 2, 2, 3, 3, 3, 3, 7, 7, 7, 7, 7, 10]
 def second_k    : Nat := 3
 
+
 open Ordering
 
 -- Cutom ordering
