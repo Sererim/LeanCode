@@ -12,7 +12,7 @@ def bestTimeToBuy (prices : List Nat) : Nat :=
   | [] => 0
   | xs => Id.run do
     let mut maxProfit : Nat := 0
-    let mut minPrice  := xs.get! 0
+    let mut minPrice  := xs[0]!
     for i in xs do
       maxProfit := max maxProfit (i - minPrice)
       minPrice  := min minPrice i
