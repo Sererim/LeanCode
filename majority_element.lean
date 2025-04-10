@@ -10,6 +10,7 @@ def getMajority : List Nat → Nat → Nat → Nat
       else getMajority xs (counter - 1) value
 
 def findMajorityElement : List Nat → Nat
+  | [] => 0
   | xs =>
     getMajority xs 0 0
 
